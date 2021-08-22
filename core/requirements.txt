@@ -1,0 +1,17 @@
+aniso8601 @ file:///C:/Users/sk_np/AppData/Local/pypoetry/Cache/artifacts/83/58/b6/15926ced9a18ada68b9b81536cc23609555094a31b444811be36749cdc/aniso8601-7.0.0-py2.py3-none-any.whl
+asgiref==3.4.1
+Django==3.2.6
+django-graphql-jwt @ file:///C:/Users/sk_np/AppData/Local/pypoetry/Cache/artifacts/5c/a8/80/9ee7c70f93bc820af9b087d5ef4def4cc6972844ac90523c15d7f09613/django_graphql_jwt-0.3.4-py3-none-any.whl
+graphene @ file:///C:/Users/sk_np/AppData/Local/pypoetry/Cache/artifacts/06/2a/bb/f74c98199a813ff811f6b0555b227f8af42dae3731e17fb9bbb4ecd0fd/graphene-2.1.9-py2.py3-none-any.whl
+graphene-django @ file:///C:/Users/sk_np/AppData/Local/pypoetry/Cache/artifacts/7a/33/48/8b46707b52b2ee28711f5687500487723b9b5e82519b848976333bc2ba/graphene_django-2.15.0-py2.py3-none-any.whl
+graphql-core @ file:///C:/Users/sk_np/AppData/Local/pypoetry/Cache/artifacts/d5/1f/da/a984d8cf1d82c33f9e4fea207924a9f75031d507d657d7404081d284f3/graphql_core-2.3.2-py2.py3-none-any.whl
+graphql-relay @ file:///C:/Users/sk_np/AppData/Local/pypoetry/Cache/artifacts/f7/52/e4/aa4e6e5eb691280910ecb371e64a97620fc0c4f461954a24eb19893f1c/graphql_relay-2.0.1-py3-none-any.whl
+Pillow @ file:///C:/Users/sk_np/AppData/Local/pypoetry/Cache/artifacts/a3/67/7c/2fbc3c0cceda18e488df945936fb042ef5cb0113f9ac413cbce3aa53f7/Pillow-8.3.1-1-cp39-cp39-win_amd64.whl
+promise @ file:///C:/Users/sk_np/AppData/Local/pypoetry/Cache/artifacts/d6/c6/43/95f1e737b1dd79d3a5ac6cfb264a889716bab4cd9d28a9bc8c69591d53/promise-2.3.tar.gz
+PyJWT @ file:///C:/Users/sk_np/AppData/Local/pypoetry/Cache/artifacts/33/2d/3b/c07cd30707fdf78d1c8279fdbc13b6aca325b3091040eff97623d32f78/PyJWT-2.1.0-py3-none-any.whl
+pytz==2021.1
+Rx @ file:///C:/Users/sk_np/AppData/Local/pypoetry/Cache/artifacts/3e/42/fa/57040de3378df2c8d1b596732e6666b9db676fc3e63c77aeb01c912679/Rx-1.6.1-py2.py3-none-any.whl
+singledispatch @ file:///C:/Users/sk_np/AppData/Local/pypoetry/Cache/artifacts/01/90/56/ae3ac45e0778c9441e12019c573abebb55515a08c99895fd855aaa2a34/singledispatch-3.7.0-py2.py3-none-any.whl
+six @ file:///C:/Users/sk_np/AppData/Local/pypoetry/Cache/artifacts/08/9f/47/c16ae03035fc69eaf100ea39657a49baaeef714e25a52575710c34cd48/six-1.16.0-py2.py3-none-any.whl
+sqlparse==0.4.1
+text-unidecode @ file:///C:/Users/sk_np/AppData/Local/pypoetry/Cache/artifacts/34/f9/c2/484c44b08bab89d472229bbd257fcc1d1c6273ee027f01cb08c4e3c309/text_unidecode-1.3-py2.py3-none-any.whl
