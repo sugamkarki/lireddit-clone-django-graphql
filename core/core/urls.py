@@ -7,7 +7,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('graphql/', csrf_exempt(GraphQLView.as_view(graphiql=True))),
+    path('', csrf_exempt(GraphQLView.as_view(graphiql=True))),
 
 ]
 urlpatterns += static(settings.MEDIA_URL,

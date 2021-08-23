@@ -1,39 +1,39 @@
 import graphene
-from graphene_django import DjangoObjectType
 from . import models
+from .mutations import PostType, LikeType, CommentType
 
-
-class PostType(DjangoObjectType):
-    class Meta:
-        model = models.Post
-        fields = "__all__"
-
-
-class CommentType(DjangoObjectType):
-    class Meta:
-        model = models.Comment
-        fields = "__all__"
-
-
-class LikeType(DjangoObjectType):
-    class Meta:
-        model = models.Like
-        fields = "__all__"
+from .mutations import CreatePost, UpdatePost, DeletePost
 
 
 class Query(graphene.ObjectType):
-    all_posts = graphene.List(PostType)
-    all_comments = graphene.List(CommentType)
-    all_likes = graphene.List(LikeType)
+    posts = graphene.List(PostType)
+    comments = graphene.List(CommentType)
+    likes = graphene.List(LikeType)
+    post = graphene.Field(PostType, id=graphene.Int())
+    comment = graphene.Field(CommentType, id=graphene.Int())
+    like = graphene.Field(LikeType, id=graphene.Int())
 
-    def resolve_all_posts(root, info):
-        return models.Post.objects.all()
+    def resolve_posts(root, info):
+        posts = models.Post.objects.all()
+        return posts
 
-    def resolve_all_comments(root, info):
+    def resolve_comment(root, info, id):
+        return models.Comment.objects.get(pk=id)
+
+    def resolve_like(root, info, id):
+        return models.Like.objects.get(pk=id)
+
+    def resolve_comments(root, info):
         return models.Comment.objects.all()
 
-    def resolve_all_likes(root, info):
+    def resolve_likes(root, info):
         return models.Like.objects.all()
 
 
-schema = graphene.Schema(query=Query)
+class Mutation(graphene.ObjectType):
+    add_post = CreatePost.Field()
+    update_post = UpdatePost.Field()
+    delete_post = DeletePost.Field()
+
+
+schema = graphene.Schema(query=Query, mutation=Mutation)
