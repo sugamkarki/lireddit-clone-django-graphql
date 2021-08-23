@@ -1,7 +1,7 @@
 import graphene
 from . import models
-from .mutations import PostType, LikeType, CommentType
-
+from .mutations import PostType, LikeType, CommentType, LikePost, CommentPost
+from graphql_auth import mutations
 from .mutations import CreatePost, UpdatePost, DeletePost
 
 
@@ -34,6 +34,15 @@ class Mutation(graphene.ObjectType):
     add_post = CreatePost.Field()
     update_post = UpdatePost.Field()
     delete_post = DeletePost.Field()
+    like_post = LikePost.Field()
+    comment_post = CommentPost.Field()
+    # mutations inbuilt functions
+    register = mutations.Register.Field()
+    verify_account = mutations.VerifyAccount.Field()
+    login = mutations.ObtainJSONWebToken.Field()
+    resend_activation_email = mutations.ResendActivationEmail.Field()
+    password_reset = mutations.PasswordReset.Field()
+    password_change = mutations.PasswordChange.Field()
 
 
 schema = graphene.Schema(query=Query, mutation=Mutation)

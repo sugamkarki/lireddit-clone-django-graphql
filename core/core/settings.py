@@ -130,11 +130,27 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Graphene
 GRAPHENE = {
     "SCHEMA": "posts.schema.schema",
-    # 'MIDDLEWARE': [
-    #     'graphql_jwt.middleware.JSONWebTokenMiddleware'
-    # ]
-
+    'MIDDLEWARE': [
+        'graphql_jwt.middleware.JSONWebTokenMiddleware',
+    ]
 }
 # Authentication_backends
+AUTHENTICATION_BACKENDS = [
+    'graphql_auth.backends.GraphQLAuthBackend',
+    'django.contrib.auth.backends.ModelBackend',
+]
 # Graphql_jwt
+GRAPHQL_JWT = {
+    "JWT_ALLOW_ANY_CLASSES": [
+        "graphql_auth.mutations.Register"
+        "graphql_auth.mutations.VerifyAccount"
+        "graphql_auth.mutations.ObtainJSONWebToken"
+        "graphql_auth.mutations.ResendActivationEmail"
+        "graphql_auth.mutations.PasswordReset"
+        "graphql_auth.mutations.PasswordChange"
+    ],
+    "JWT_VERIFY_EXPIRATION": True,
+    "JWT_LONG_RUNNING_REFRESH_TOKEN": True,
+}
 # Email Backend
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
