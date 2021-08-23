@@ -3,9 +3,10 @@ from . import models
 from .mutations import PostType, LikeType, CommentType, LikePost, CommentPost
 from graphql_auth import mutations
 from .mutations import CreatePost, UpdatePost, DeletePost
+from graphql_auth.schema import MeQuery
 
 
-class Query(graphene.ObjectType):
+class Query(MeQuery, graphene.ObjectType):
     posts = graphene.List(PostType)
     comments = graphene.List(CommentType)
     likes = graphene.List(LikeType)
